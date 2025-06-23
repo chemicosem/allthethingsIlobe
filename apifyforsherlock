@@ -1,0 +1,44 @@
+# Apify Actor/Workflow for Sherlock
+
+Automate Sherlock with [Apify](https://apify.com/):
+
+## Step 1: Create a Docker-based Actor
+
+**apify.json:**
+```json
+{
+  "name": "run-sherlock",
+  "version": "0.0.1",
+  "env": {},
+  "main": "main.py"
+}
+```
+
+**Dockerfile:**
+```Dockerfile
+FROM python:3.11-slim
+RUN apt-get update && apt-get install -y git
+RUN git clone https://github.com/sherlock-project/sherlock.git /opt/sherlock
+WORKDIR /opt/sherlock
+RUN pip install -r requirements.txt
+COPY main.py .
+ENTRYPOINT ["python3", "main.py"]
+```
+
+**main.py:**
+```python
+import os
+import sys
+import subprocess
+
+username = os.getenv('USERNAME', 'jack')
+subprocess.run(['python3', 'sherlock/sherlock.py', username])
+```
+
+## Step 2: Deploy to Apify
+- Compress your files and upload as a new Actor.
+- Set the USERNAME input in the Actor's input schema.
+
+## References
+- [Apify Docs](https://docs.apify.com/)
+- [Sherlock GitHub](https://github.com/sherlock-project/sherlock)

@@ -1,0 +1,35 @@
+# IP Mapping & Readdressing with DHCP
+
+## Using DHCP for Dynamic Address Assignment
+
+### Linux (dhclient)
+```bash
+sudo dhclient eth0
+
+```
+
+### Windows (renew IP)
+```powershell
+ipconfig /release
+ipconfig /renew
+```
+
+### View DHCP Lease
+- Linux: `cat /var/lib/dhcp/dhclient.leases`
+- Windows: `ipconfig /all`
+
+## DHCP Tools
+- [isc-dhcp-server](https://help.ubuntu.com/community/ISC-DHCP-Server)
+- [dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.html)
+
+## DHCP Server Example (Linux)
+```bash
+sudo apt install isc-dhcp-server
+sudo nano /etc/dhcp/dhcpd.conf
+# Configure subnet, range, etc.
+sudo systemctl start isc-dhcp-server
+```
+
+**References:**
+- [DHCP Overview](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
+- [ISC DHCP](https://kb.isc.org/docs/isc-dhcp-44-manual-pages-dhcpdconf)

@@ -1,34 +1,39 @@
-# Manual IP, VPN, and Router Configuration
+# Downloadable & Copyable Pentesting Tools
 
-## Manual Static IP (Linux)
+A curated list of widely used, open-source pentesting tools that you can download or clone directly.
+
+## Reconnaissance
+- [Sherlock](https://github.com/sherlock-project/sherlock) — Hunt down social media accounts by username
+- [theHarvester](https://github.com/laramies/theHarvester) — Emails, subdomains, hosts, people from public sources
+- [Recon-ng](https://github.com/lanmaster53/recon-ng) — Web reconnaissance framework
+
+## Scanning & Enumeration
+- [Nmap](https://nmap.org/download.html) — Network scanner
+- [Masscan](https://github.com/robertdavidgraham/masscan) — Fast port scanner
+- [Amass](https://github.com/owasp-amass/amass) — Attack surface mapping
+
+## Exploitation
+- [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
+- [sqlmap](https://github.com/sqlmapproject/sqlmap)
+- [exploitdb](https://github.com/offensive-security/exploitdb) — Public exploits
+
+## Post Exploitation
+- [Empire](https://github.com/BC-SECURITY/Empire) — PowerShell & Python post-exploitation
+- [CrackMapExec](https://github.com/Porchetta-Industries/CrackMapExec) — Swiss army knife for pentesting networks
+
+## Wireless
+- [Aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
+
+## Password Attacks
+- [John the Ripper](https://github.com/openwall/john)
+- [Hashcat](https://github.com/hashcat/hashcat)
+- [Hydra](https://github.com/vanhauser-thc/thc-hydra)
+
+## OSINT
+- [SpiderFoot](https://github.com/smicallef/spiderfoot)
+- [Maltego](https://www.maltego.com/downloads/)
+
+**Clone Example:**
 ```bash
-sudo ip addr add 192.168.1.100/24 dev eth0
-sudo ip route add default via 192.168.1.1
+git clone https://github.com/sherlock-project/sherlock.git
 ```
-
-## Manual Static IP (Windows)
-```powershell
-netsh interface ip set address "Ethernet" static 192.168.1.100 255.255.255.0 192.168.1.1
-```
-
-## VPN Configuration
-
-### OpenVPN (Linux/Windows)
-- [Install OpenVPN](https://openvpn.net/community-downloads/)
-- Use `.ovpn` config files:
-```bash
-sudo openvpn --config client.ovpn
-```
-
-## Router Configuration
-
-1. **Access Router Panel:** Usually at http://192.168.1.1
-2. **Login:** Use admin credentials.
-3. **Navigate:** Find LAN/DHCP or WAN settings.
-4. **Set Static IP:** Assign fixed IP by MAC address or set static WAN IP.
-5. **VPN Setup:** Many routers support OpenVPN, L2TP, or PPTP.
-
-**Reference Guides:**
-- [OpenVPN Docs](https://community.openvpn.net/openvpn/wiki/GettingStarted)
-- [DD-WRT Wiki (Advanced Routers)](https://wiki.dd-wrt.com/wiki/index.php/Main_Page)
-- [TP-Link Static IP Setup](https://www.tp-link.com/us/support/faq/14/)

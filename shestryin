@@ -1,0 +1,80 @@
+# Most Common Pentesting Tools in Kali Linux
+
+Kali Linux comes pre-loaded with hundreds of penetration testing and security tools. Here’s a list of the most popular and widely used, with short descriptions and download/reference links.
+
+---
+
+## 1. Wireshark
+- **Use:** Network protocol analyzer (packet capture and analysis)
+- **Docs:** https://www.wireshark.org/docs/
+- **Kali Install:** `sudo apt install wireshark`
+
+## 2. Metasploit Framework
+- **Use:** Exploitation framework, vulnerability research, development, and executing exploit code
+- **Docs:** https://docs.metasploit.com/
+- **Kali Install:** `sudo apt install metasploit-framework`
+
+## 3. Nmap
+- **Use:** Network mapper/scanner for discovering hosts and services
+- **Docs:** https://nmap.org/book/inst-windows.html
+- **Kali Install:** `sudo apt install nmap`
+
+## 4. Burp Suite Community Edition
+- **Use:** Web vulnerability scanner and proxy for attacking web apps
+- **Docs:** https://portswigger.net/burp/documentation
+- **Kali Install:** `sudo apt install burpsuite`
+
+## 5. John the Ripper
+- **Use:** Password cracker
+- **Docs:** https://www.openwall.com/john/doc/
+- **Kali Install:** `sudo apt install john`
+
+## 6. Aircrack-ng
+- **Use:** Wireless network security auditing (WEP/WPA cracking)
+- **Docs:** https://www.aircrack-ng.org/doku.php?id=documentation
+- **Kali Install:** `sudo apt install aircrack-ng`
+
+## 7. Hydra
+- **Use:** Network login cracker for numerous protocols
+- **Docs:** https://github.com/vanhauser-thc/thc-hydra
+- **Kali Install:** `sudo apt install hydra`
+
+## 8. sqlmap
+- **Use:** Automated SQL injection and database takeover tool
+- **Docs:** https://github.com/sqlmapproject/sqlmap/wiki
+- **Kali Install:** `sudo apt install sqlmap`
+
+## 9. Netcat
+- **Use:** Swiss army knife for networking (debug, connect, transfer)
+- **Docs:** https://nc110.sourceforge.io/
+- **Kali Install:** `sudo apt install netcat`
+
+## 10. Nikto
+- **Use:** Web server vulnerability scanner
+- **Docs:** https://cirt.net/Nikto2
+- **Kali Install:** `sudo apt install nikto`
+
+## 11. theHarvester
+- **Use:** OSINT gathering for emails, domains, hosts
+- **Docs:** https://github.com/laramies/theHarvester
+- **Kali Install:** `sudo apt install theharvester`
+
+## 12. Gobuster
+- **Use:** Directory and file brute-forcing on web servers
+- **Docs:** https://github.com/OJ/gobuster
+- **Kali Install:** `sudo apt install gobuster`
+
+## 13. Enum4linux
+- **Use:** Windows/Samba enumeration tool
+- **Docs:** https://github.com/CiscoCXSecurity/enum4linux
+- **Kali Install:** `sudo apt install enum4linux`
+
+---
+
+### How to List All Tools in Kali
+```bash
+apt list --installed | grep kali
+```
+or browse: https://tools.kali.org/tools-listing
+
+**Note:** Most tools can be installed with `sudo apt install <toolname>` if not already present.

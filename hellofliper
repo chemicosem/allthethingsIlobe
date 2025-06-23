@@ -1,0 +1,55 @@
+# Flipper Zero: What It Is, How It Works, and How to Configure
+
+## What is Flipper Zero?
+
+Flipper Zero is a portable, multi-tool device for pentesters, hackers, and geeks. It's designed for interacting with digital protocols, access control systems, and hardware via RF, NFC, infrared, GPIO, and more.
+
+- **Official site:** https://flipperzero.one/
+- **Docs & Guides:** https://docs.flipperzero.one/
+
+## What Can Flipper Zero Do?
+
+- **RFID/NFC:** Read, emulate, and clone access cards (125kHz/13.56MHz)
+- **Sub-GHz RF:** Capture, analyze, and transmit signals to control gates, garage doors, etc.
+- **Infrared:** Universal remote for TVs and other devices
+- **GPIO:** Interact with hardware (debugging, sensors, hacking)
+- **BadUSB:** Emulate keyboard/mouse for payload delivery
+- **Bluetooth LE:** Connect with mobile apps and devices
+
+## How Does It Work?
+
+- Has built-in antennas and hardware for all functions.
+- Runs open-source firmware with an easy-to-use UI.
+- Can store and replay signals (e.g., RFID card data, RF signals).
+- Extensible: supports custom firmware and plugins.
+
+## Basic Configuration Steps
+
+### 1. Initial Setup
+- Power on and follow on-screen instructions.
+- Set language, region, and time.
+
+### 2. Update Firmware
+- Connect to a PC via USB.
+- Use [Flipper Mobile App](https://docs.flipperzero.one/basics/mobile-apps) or [qFlipper](https://update.flipperzero.one/).
+- Follow prompts to update to the latest firmware.
+
+### 3. Loading and Using Modules
+- Navigate with buttons to select functions (RFID, NFC, SubGHz, IR, etc.).
+- Example: To read an RFID card:
+    1. Go to "125kHz RFID" → "Read"
+    2. Hold the card to the Flipper and save the data.
+    3. Use "Emulate" to replay the card.
+
+### 4. Custom Payloads and Plugins
+- Copy custom files (payloads, scripts) to the Flipper using USB or SD card.
+- Plugins and scripts can be managed via the Flipper's menu or the companion app.
+
+## Security and Legal Notice
+- Flipper Zero is a powerful device—use it responsibly and legally.
+- Many features (RF emulation, card cloning) can be illegal if used without consent.
+
+## Resources
+- [Official Documentation](https://docs.flipperzero.one/)
+- [Community Wiki](https://wiki.flipperzero.one/)
+- [GitHub Firmware](https://github.com/flipperdevices/flipperzero-firmware)

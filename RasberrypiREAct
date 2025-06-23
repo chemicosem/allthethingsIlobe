@@ -1,0 +1,33 @@
+# Booting and Setting Up a Raspberry Pi with Linux
+
+## 1. Prepare the MicroSD Card
+
+- Download [Raspberry Pi Imager](https://www.raspberrypi.com/software/) for your OS.
+- Insert microSD card (8GB+ recommended).
+- Open Raspberry Pi Imager.
+    - Choose OS: "Raspberry Pi OS (32-bit)" or another preferred Linux distro.
+    - Choose Storage: Your microSD card.
+    - Click "Write".
+- Eject and insert the microSD card into your Raspberry Pi.
+
+## 2. First Boot
+
+- Connect monitor, keyboard, mouse.
+- Plug in power; Pi will boot automatically.
+- Follow on-screen setup instructions (language, Wi-Fi, update).
+
+## 3. (Optional) Enable SSH or Headless Setup
+
+- To enable SSH before first boot, create an empty file named `ssh` (no extension) in the boot partition of the SD card.
+- For headless Wi-Fi, add a file named `wpa_supplicant.conf` with your Wi-Fi details.
+
+## 4. Update System
+
+Open a terminal and run:
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+## 5. Ready for React or Any Linux Software!
+
+You're now running Linux on your Raspberry Pi and can install other packages (like Node.js, npm, etc.) to run React or other apps.
